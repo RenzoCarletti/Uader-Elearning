@@ -1,0 +1,46 @@
+name: Uader
+type: theme
+base theme: estore
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+version: 1.0
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+# Libraries.
+
+libraries:
+  - 'uader/global-styling'
+
+# Regions.
+
+regions:
+  top_header_right: 'Top Header Right'
+  left_middle_header: 'Left Middle Header'
+  middle_header: 'Middle Header'
+  right_middle_header: 'Right Middle Header'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  header: 'Header'
+  content: 'Content'
+  sidebar_first: 'Left Sidebar'
+  sidebar_second: 'Right Sidebar'
+  footer_first: 'Footer First Widget'
+  footer_second: 'Footer Second Widget'
+  footer_third: 'Footer Third Widget'
+  footer_fourth: 'Footer Fourth Widget'
+  footer_bottom_left: 'Footer Bottom Left'
+  footer_bottom_right: 'Footer Bottom Right'
+
+dependencies:
+
+  - drupal:bootstrap
+  # - drupal:fontawesome
+  # - drupal:commerce
+  # - drupal:commerce_wishlist
+  # - drupal:pathauto
+  # - drupal:views_bootstrap
+  # - drupal:block_class
+  # - drupal:panels
+  # - drupal:page_manager

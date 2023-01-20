@@ -1,0 +1,10 @@
+services:
+  moodle_rest_user.associate_event_subscriber:
+    class: '\Drupal\moodle_rest_user\EventSubscriber\AssociateEventSubscriber'
+    arguments: ['@moodle_rest.rest_functions']
+    tags:
+      - { name: 'event_subscriber' }
+  moodle_rest_user.map_event_subscriber:
+    class: '\Drupal\moodle_rest_user\EventSubscriber\UserMapSubscriber'
+    tags:
+      - { name: 'event_subscriber' }

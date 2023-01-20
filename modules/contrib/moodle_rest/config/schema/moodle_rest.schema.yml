@@ -1,0 +1,10 @@
+moodle_rest.settings:
+  type: config_object
+  label: 'Moodle Integration Settings'
+  mapping:
+    url:
+      type: string
+      label: 'URL of Moodle site'
+    wstoken:
+      type: string
+      label: 'Moodle site REST WebService token'

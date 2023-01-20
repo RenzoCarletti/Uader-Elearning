@@ -1,0 +1,12 @@
+name: 'Current Year'
+description: 'Makes the current year accessible as an input filter.'
+core: 8.x
+type: module
+dependencies: {  }
+package: 'Text Formats'
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2020-05-27
+version: '1.0.1'
+project: 'current_year'
+datestamp: 1590610215

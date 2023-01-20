@@ -1,0 +1,7 @@
+services:
+    inscripcion_automatica.order_fulfillment_subscriber:
+     class: 'Drupal\inscripcion_automatica\EventSubscriber\ActionInscripcion'
+     arguments: ['@language_manager', '@plugin.manager.mail']
+     tags:
+      - { name: 'event_subscriber'}
+     

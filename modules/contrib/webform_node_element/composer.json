@@ -1,0 +1,11 @@
+{
+    "name": "drupal/webform_node_element",
+    "description": "Webform Node Element is a module that allows you to include node content in a webform without using the PHP input filter.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/webform_node_element",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/search/webform_node_element",
+        "source": "https://git.drupalcode.org/project/webform_node_element"
+    }
+}

@@ -1,0 +1,10 @@
+access own moodle_rest_user courses:
+  title: 'Access own course list'
+  description: 'Courses on own user account.'
+access all moodle_rest_user courses:
+  title: 'Access course list on all users'
+  description: 'Courses on other users that can be accessed.'
+#enrole moodle_rest_user course:
+#  title: 'Enrole on courses'
+#unenrole moodle_rest_user course:
+#  title: 'Unenrole from courses'

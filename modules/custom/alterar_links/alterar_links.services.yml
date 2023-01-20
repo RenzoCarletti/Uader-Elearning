@@ -1,0 +1,6 @@
+services:
+    alterar_links.route_subscriber:
+     class: 'Drupal\alterar_links\Routing\RouteSubscriber'
+     tags:
+      - { name: 'event_subscriber'}
+     

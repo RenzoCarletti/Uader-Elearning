@@ -1,0 +1,4 @@
+moodle_rest.settings:
+  route_name: moodle_rest.settings
+  base_route: moodle_rest.settings
+  title: 'Server' 

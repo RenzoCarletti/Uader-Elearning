@@ -1,0 +1,66 @@
+id: moodle_course_by_field
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - moodle_rest_course
+migration_tags:
+  - Moodle
+migration_group: moodle_course
+label: 'Moodle Get Course by Field migration'
+source:
+  plugin: moodle_get_courses_by_field
+process:
+  type:
+    plugin: default_value
+    default_value: moodle_course
+  title: displayname
+  body/value: summary
+  body/format:
+    plugin: static_map
+    source: summaryformat
+    map:
+      0: plain_text
+      1: full_html
+  moodle_start_date:
+    -
+      plugin: skip_on_empty
+      source: startdate
+      method: process
+    -
+      plugin: format_date
+      from_format: U
+      to_format: 'Y-m-d\TH:i:s'
+  moodle_end_date:
+    -
+      plugin: skip_on_empty
+      source: enddate
+      method: process
+    -
+      plugin: format_date
+      from_format: U
+      to_format: 'Y-m-d\TH:i:s'
+  created:
+    -
+      plugin: get
+      source: timecreated
+    -
+      plugin: default_value
+      default_value: ''
+  changed:
+    -
+      plugin: get
+      source: timemodified
+    -
+      plugin: default_value
+      default_value: ''
+  uid:
+    plugin: default_value
+    default_value: 1
+  moodle_course_id: id
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required: {  }
+  optional: {  }

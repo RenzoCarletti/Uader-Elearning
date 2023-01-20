@@ -1,0 +1,12 @@
+{
+  "name": "drupal/moodle_rest",
+  "type": "drupal-module",
+  "description": "Moodle Integration",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/moodle_rest",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/moodle_rest",
+    "source": "http://cgit.drupalcode.org/moodle_rest"
+  }
+}

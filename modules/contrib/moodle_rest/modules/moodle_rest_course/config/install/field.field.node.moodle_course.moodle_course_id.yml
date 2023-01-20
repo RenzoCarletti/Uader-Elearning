@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.moodle_course_id
+    - node.type.moodle_course
+  module:
+    - moodle_rest
+id: node.moodle_course.moodle_course_id
+field_name: moodle_course_id
+entity_type: node
+bundle: moodle_course
+label: 'Course ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  type: course
+field_type: moodle_id

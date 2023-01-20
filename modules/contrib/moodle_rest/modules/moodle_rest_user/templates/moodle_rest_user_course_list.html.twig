@@ -1,0 +1,8 @@
+<div class="drupal-moodle-integration-user-course-list">
+{% if course_list is empty %}
+  <p>{{ 'No courses found'|t }}</p>
+{% endif %}
+{% for key, course in course_list %}
+  {{ course }}
+{% endfor %}
+</div>

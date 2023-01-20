@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * @file
+ * Defines Drupal Moodle User Integration Functions.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\moodle_rest_user\ExtraFields;
+use Drupal\moodle_rest_user\UserEventHelper;
+use Drupal\node\NodeInterface;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function moodle_rest_user_theme($existing, $type, $theme, $path) {
+  return [
+    'moodle_rest_user_course_list' => [
+      'variables' => ['course_list' => []],
+      'template' => 'moodle_rest_user_course_list',
+    ],
+    'moodle_rest_user_course' => [
+      'variables' => [
+        'moodle_data' => [],
+        'title' => NULL,
+        'summary' => NULL,
+        'completion' => NULL,
+      ],
+      'template' => 'moodle_rest_user_course',
+    ],
+    'moodle_rest_user_course_completion' => [
+      'variables' => ['progress' => NULL],
+      'template' => 'moodle_rest_user_course_completion',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function moodle_rest_preprocess_moodle_rest_user_course(&$variables) {
+  $variables['title'] = Html::escape($variables['moodle_data']['fullname']);
+  if ($variables['moodle_data']['summaryformat']) {
+    $variables['summary'] = ['#markup' => $variables['moodle_data']['summary']];
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function moodle_rest_user_user_presave(UserInterface $account) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(UserEventHelper::class)
+    ->userPresave($account);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function moodle_rest_user_user_insert(UserInterface $account) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(UserEventHelper::class)
+    ->userInsert($account);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_prepare_form().
+ */
+function moodle_rest_user_user_prepare_form(UserInterface $account, $operation, FormStateInterface $form_state) {
+  if ($operation == 'edit') {
+    return \Drupal::service('class_resolver')
+      ->getInstanceFromDefinition(UserEventHelper::class)
+      ->userEdit($account, $form_state);
+  }
+}
+
+/**
+ * Implements hook_ENTITTY_TYPE_update().
+ */
+function moodle_rest_user_user_update(UserInterface $account) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(UserEventHelper::class)
+    ->userUpdate($account);
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function moodle_rest_user_user_login(UserInterface $account) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(UserEventHelper::class)
+    ->userLogin($account);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function moodle_rest_user_user_view(array &$build, UserInterface $account, EntityViewDisplayInterface $display, $view_mode) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(UserEventHelper::class)
+    ->userView($account, $build);
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function moodle_rest_user_entity_extra_field_info() {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(ExtraFields::class)
+    ->entityExtraFieldInfo();
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function moodle_rest_user_node_view(array &$build, NodeInterface $node, EntityViewDisplayInterface $display, $view_mode) {
+  return \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(ExtraFields::class)
+    ->nodeView($build, $node, $display, $view_mode);
+}

@@ -1,0 +1,12 @@
+name: Webform Node Element Example
+type: module
+description: Example module for webform_node_element.
+core_version_requirement: ^8 || ^9
+package: webform
+dependencies:
+  - webform_node_element:webform_node_element
+
+# Information added by Drupal.org packaging script on 2021-11-18
+version: '8.x-1.2'
+project: 'webform_node_element'
+datestamp: 1637242235

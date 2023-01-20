@@ -1,0 +1,61 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.moodle_rest_user_teaser
+    - field.field.node.moodle_course.body
+    - field.field.node.moodle_course.moodle_course_id
+    - field.field.node.moodle_course.moodle_end_date
+    - field.field.node.moodle_course.moodle_start_date
+    - node.type.moodle_course
+  module:
+    - datetime
+    - moodle_rest
+    - text
+    - user
+id: node.moodle_course.moodle_rest_user_teaser
+targetEntityType: node
+bundle: moodle_course
+mode: moodle_rest_user_teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  moodle_course_id:
+    type: moodle_id_link
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link_text: 'On Moodle'
+    third_party_settings: {  }
+  moodle_end_date:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  moodle_start_date:
+    weight: 1
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  moodle_user_completion:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

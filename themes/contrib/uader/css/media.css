@@ -1,0 +1,334 @@
+@media (max-width: 800px) {
+    /*HEADER*/
+
+    /********** Carrito **********/
+    .my-cart-wrap {
+        display: none;
+    }
+    .cardtable-in {
+        overflow-x: auto;
+    }
+    .middle-header-wrapper .region-right-middle-header .cart-block-wrapper .cart-contents {
+        max-width: 150px;
+    }
+    .views-view-commerce_cart_form-default div#edit-actions {
+        text-align: center;
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
+    .cart--cart-block.block.cart-block-wrapper.has-dropdown.clearfix {
+        width: 100%;
+    }
+    section#block-verloscursos a {
+        border: 0; 
+        padding: 0; 
+        font-size: 11px;
+    }
+    section#block-headercursoysesion {
+        flex-direction: row;
+        gap: 0;
+        padding-bottom: 15px;
+    }
+    section#block-verloscursos {
+        line-height: normal;
+    }
+    /********** Menu **********/
+    .sf-accordion-toggle.sf-style-black {
+        width: 100%;
+    }
+    header#navbar a {
+        width: 100%;
+    }
+    .sf-accordion-toggle.sf-style-black .sf-expanded {
+        padding: 17px;
+    }
+    a#superfish-main-toggle {
+        transition: cubic-bezier(0, 0, 0.2, 1);
+    }
+    section#block-mainnavigation-2 {
+        flex-direction: column;
+    }
+    /*div.sf-accordion-toggle.sf-style-black > a::after {
+        display: none !important;
+        visibility: hidden !important;
+    }*/
+    div.sf-accordion-toggle.sf-style-black > .sf-expanded:after {
+        visibility: hidden;
+    }
+    
+    /*otra cosa*/
+    .region.region-right-middle-header {
+        margin: 0;
+        flex-direction: row-reverse;
+    }
+    section#block-cart-2 {
+        flex: 1;
+    }
+    .cart--cart-block.block.cart-block-wrapper.has-dropdown.clearfix {
+        flex-direction: row-reverse;
+    }
+    li.last:before {
+        left: -5px;
+    }
+    header.navbar .navbar-header {
+        height: 60px;
+    }
+    /*Otras cosas*/
+    section#block-barrade3elementos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hidden-xs {
+        display: block !important;
+    }
+    .region.region-content #block-quicktabscategorias,
+    .region.region-content #block-views-block-categorias-bloquesito-block-1,
+    .region.region-content #block-lomasbuscado
+    {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .middle-header-wrapper.clearfix .container-fluid .col-md-6,
+    .middle-header-wrapper.clearfix .container-fluid .col-md-3,
+    .middle-header-wrapper.clearfix .container-fluid {
+        height: auto;
+        width: 100%;
+    }
+    nav#block-useraccountmenu .navbar-right {
+        display: flex;
+        margin: 0;
+    }
+    .region.region-middle-header,
+    .middle-header-wrapper.clearfix .container-fluid {
+        flex-direction: column;
+    }
+    .container-fluid .col-md-6 {
+        width: 100%;
+    }
+    #block-textoheader div p {
+        border: 0;
+    }
+    .region.region-content {
+        padding: 0 2px;
+    }
+    /*Slider*/
+    .on-the-gray ul.quicktabs-tabs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .container-fluid {
+        margin: 0;
+        padding: 0;
+    }
+    .slick-list {
+    width: 100%;
+    }
+    .container-fluid section.col-sm-12 {
+        padding: 0;
+    }
+    .slide__content {
+        height: 550px;
+        max-height: 100%;
+    }
+    .slick--view--slider-portada .views-field-field-segundo-boton a, .slick--view--slider-portada .views-field-field-boton a {
+        padding: 5px 10px;
+        font-size: 17px;
+    }
+    .slick--view--slider-portada .slide__description {
+        padding: 2.5em;
+    }
+    .slide__caption {
+        padding: 0 38px 0 38px;
+    }
+    .slick--view--slider-portada .slide__description h2 {
+        font-size: 22pt;
+    }
+    .views-field.views-field-field-cuerpo p {
+        font-size: 14pt;
+    }
+    .slick--view--slider-portada .slide__description {
+        gap: 20px;
+        text-align: center;
+    }
+    #block-views-block-slider-portada-block-1 .views-field.views-field-fieldset span.field-content fieldset {
+        gap: 0;
+    }
+    .slick-dots {
+        bottom: 15px;
+    }
+    /**/
+    #block-portada2 {
+        border: 0;
+    }
+    /*nav var*/
+    ul.menu.menu--account.nav.navbar-nav.navbar-right {
+        max-width: 100%;
+    }
+    .middle-header-wrapper .region-right-middle-header .cart-block-wrapper a.cart-icon {
+        margin-left: -27%;
+    }
+    /************************** Elegí tu curso en línea ********************/
+    section#block-quicktabscategorias, 
+    section#block-barrade3elementoscontenido2, 
+    section#block-views-block-categoria-block-10 {
+        background: white;
+    }
+    section#block-quicktabscategorias li.grid, 
+    section#block-views-block-categoria-block-10 li.grid {
+        box-shadow: 0 3px 6px 0 rgb(0 0 0 / 50%);
+    }
+    section#block-quicktabscategorias .grid .views-field.views-field-fieldset, 
+    section#block-views-block-categoria-block-10 .grid .views-field.views-field-fieldset {
+        padding: 0;
+    }
+    #block-quicktabscategorias .grid__content.form-group, section#block-views-block-categoria-block-10 .grid__content.form-group {
+        min-height: 480px;
+        max-height: 100%;
+    }
+    /****************************Categorias destacadas **************/
+    .view-categorias-bloquesito .view-content .views-row {
+        width: 43%;
+    }
+    .view-categorias-bloquesito .view-content span {
+        min-height: 70px;
+        padding: 5px 10px;
+    }
+    /******************** Opiniones y experiencias ***********/
+    section#block-views-block-slider-comentarios-block-1 h2 {
+        margin: 20px 0 10px 0;
+    }
+    /************************************* LOS MAS BUSCADOS *******************************/
+    section#block-views-block-los-mas-buscados-block-1 .view-content span {
+        white-space: nowrap;
+        margin-right: 0;
+        align-items: center;
+    }
+    /*Redes sociales*/
+    #block-barraderedessociales .field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item {
+        flex-direction: column;
+        gap: 30px;
+    }
+    section#block-unidadesacademicas .field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item p {
+        flex-wrap: wrap;
+    }
+    /******* CURSOS ******/
+    .commerce-product--type-curso {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .div-sec-product {
+        flex-direction: column-reverse;
+    }
+    .centro-producto {
+        position: initial;
+        width: 100%;
+    }
+    .productos .btn-primary {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    }
+    /*modalidad*/
+    .modalidad {
+        border-bottom: 1px solid grey;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+    /*areas*/
+    .field--name-field-area .field--label {
+        margin-bottom: 15px;
+    }
+    .field--name-field-area .field--items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .div-sec-product .field.field--name-field-area.field--type-entity-reference.field--label-above .field--item {
+        margin: 0;
+    }
+    .field.field--name-field-area.field--type-entity-reference.field--label-above {
+        border-bottom: 1px solid grey;
+        margin-bottom: 15px;
+        display: none;
+    }
+    /************************************* Opiniones y experiencias *******************/
+    .views-field.views-field-body, .views-field.views-field-field-nombre-comentario .field-content {
+        font-size: 1.2em;
+    }
+    /************************************ Conocé más sobre nuestras Facultades **************/
+    section#block-unidadesacademicas .field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item p {
+        gap: 0;
+    }
+    section#block-unidadesacademicas .field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item p a {
+        width: 50%;
+    }
+    section#block-unidadesacademicas .block-content h2, section#block-unidadesacademicas .block-content p:first-child {
+        margin: 0;
+    }
+    /******************************************** INSTITUCIONAL *******************************/
+    /****** Formas de pago *******/
+    .formas-de-pago:nth-child(2n) {
+        margin-top: 40px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+        gap: 50px;
+    }
+    /********** Quienes somos **************/
+    .quienes-somos-div {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .quienes-somos-div .mision, .quienes-somos-div .vision, .quienes-somos-div .valores {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    /*********** Contacto ******************/
+    div#quicktabs-tabpage-institucional-3 {
+        flex-direction: column;
+    }
+    div#quicktabs-institucional .field--name-body {
+        margin-bottom: 30px;
+    }
+    .on-the-gray {
+        padding: 0 10px;
+    }
+    /************ Preguntas Frecuentes *****************/
+    .view-preguntas-frecuentes {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .path-preguntas-frecuentes .ui-state-default {
+        max-width: 98%;
+    }
+
+    /********* Footer **********/
+    section#block-localidadfooter {
+        border: none;
+    }
+    section#block-logohead-2 {
+        width: 95%;
+    }
+    .productos .footer-bottom.clearfix {
+        margin-bottom: 45px;
+    }
+    /*******************USUARIO ************/
+    .user .region.region-content {
+        width: 95%;
+        margin: 0 auto;
+    }
+    /*********** USUARIO MIS CURSOS ***************/
+    .drupal-moodle-integration-user-course-list .layout.layout--onecol {
+        width: 95%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 550px) {
+
+}

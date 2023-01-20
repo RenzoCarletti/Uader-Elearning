@@ -1,0 +1,19 @@
+{
+  "name": "drupal/moodle_rest_user",
+  "type": "drupal-module",
+  "description": "Moodle Drupal User Integration",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/moodle_rest",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/moodle_rest",
+    "source": "http://cgit.drupalcode.org/moodle_rest"
+  },
+  "extra": {
+    "drush": {
+      "services": {
+        "drush.services.yml": "^9"
+      }
+    }
+  }
+}

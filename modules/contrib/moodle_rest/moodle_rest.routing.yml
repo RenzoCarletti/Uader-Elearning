@@ -1,0 +1,7 @@
+moodle_rest.settings:
+  path: '/admin/config/services/moodle'
+  defaults:
+    _form: '\Drupal\moodle_rest\Form\MoodleSettingsForm'
+    _title: 'Moodle System Configuration'
+  requirements:
+    _permission: 'administer site configuration'

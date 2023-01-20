@@ -1,0 +1,8 @@
+moodle_rest_user.course_list:
+  title: 'Course list'
+  route_name: moodle_rest_user.course_list
+  base_route: entity.user.canonical
+moodle_rest_user.settings:
+  title: 'User'
+  route_name: moodle_rest_user.settings
+  base_route: moodle_rest.settings

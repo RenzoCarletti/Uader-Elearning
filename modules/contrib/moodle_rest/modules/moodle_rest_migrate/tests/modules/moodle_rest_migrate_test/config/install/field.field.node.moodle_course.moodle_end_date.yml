@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.moodle_end_date
+    - node.type.moodle_course
+  module:
+    - datetime
+id: node.moodle_course.moodle_end_date
+field_name: moodle_end_date
+entity_type: node
+bundle: moodle_course
+label: 'End date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

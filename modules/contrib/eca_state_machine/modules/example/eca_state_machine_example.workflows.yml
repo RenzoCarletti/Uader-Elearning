@@ -1,0 +1,26 @@
+default:
+  id: default
+  label: ECA Default
+  group: eca_node_with_bundle
+  states:
+    edited:
+      label: Edited
+    needsreview:
+      label: Needs review
+    published:
+      label: Published
+    archived:
+      label: Archived
+  transitions:
+    askforreview:
+      label: Ask for review
+      from: [edited]
+      to:   needsreview
+    publish:
+      label: Publish
+      from: [needsreview]
+      to: published
+    archive:
+      label: Archive
+      from: [edited, needsreview, published]
+      to:   archived

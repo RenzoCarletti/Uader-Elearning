@@ -1,0 +1,24 @@
+.moodle-user-course-completion {
+  position: relative;
+}
+
+.progress-bar-wrapper {
+  display: flex;
+  overflow: hidden;
+  height: 1rem;
+  font-size: 1rem;
+  border: 1px solid #dee2e6;
+}
+
+.progress-bar-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #0f6fc5;
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
+}

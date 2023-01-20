@@ -1,0 +1,12 @@
+--- config/schema/quicktabs.schema.yml
++++ config/schema/quicktabs.schema.yml
+@@ -77,6 +77,9 @@ quicktabs.options.quick_tabs:
+     ajax:
+       type: boolean
+       label: Ajax
++    permalinks:
++      type: boolean
++      label: Permalinks
+ 
+ 
+ # Block Tab Type Plugin

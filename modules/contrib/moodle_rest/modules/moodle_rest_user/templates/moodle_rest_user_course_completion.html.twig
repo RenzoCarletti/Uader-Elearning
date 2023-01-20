@@ -1,0 +1,10 @@
+<div class="moodle-user-course-completion">
+{% if not progress is null %}
+  <div class="progress-bar-wrapper">
+    <div class="progress-bar-inner" role="progressbar" aria-valuenow="{{progress}}" style="width: {{progress}}%" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <p>{{ 'Course progress:'|t }} {{progress}}%</p>
+{% else %}
+  <p>{{ 'No progress information'|t }}</p>
+{% endif %}
+</div>

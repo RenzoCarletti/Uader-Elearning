@@ -1,0 +1,7 @@
+services:
+
+  eca_state_machine.subscriber:
+    class: Drupal\eca_state_machine\EventSubscriber\EcaStateMachine
+    parent: eca.default_event_subscriber
+    tags:
+      - { name: event_subscriber }

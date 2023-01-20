@@ -1,0 +1,13 @@
+name: ECA State Machine Example
+type: module
+description: 'Provides an example workflow for ECA State Machine.'
+core_version_requirement: ^9 || ^10
+package: ECA
+dependencies:
+  - drupal:node
+  - eca_state_machine:eca_state_machine
+
+# Information added by Drupal.org packaging script on 2022-07-22
+version: '1.0.0'
+project: 'eca_state_machine'
+datestamp: 1658484295

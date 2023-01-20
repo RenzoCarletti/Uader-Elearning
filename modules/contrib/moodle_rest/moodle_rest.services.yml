@@ -1,0 +1,12 @@
+services:
+  logger.channel.moodle_rest:
+    parent: logger.channel_base
+    arguments: ['moodle_rest']
+
+  moodle_rest.rest_ws:
+    class: Drupal\moodle_rest\Services\MoodleRest
+    arguments: ['@config.factory', '@http_client']
+
+  moodle_rest.rest_functions:
+    class: Drupal\moodle_rest\Services\RestFunctions
+    arguments: ['@logger.channel.moodle_rest']

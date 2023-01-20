@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - moodle_rest_course
+id: node.moodle_rest_user_teaser
+label: 'User Course List Teaser'
+targetEntityType: node
+cache: true

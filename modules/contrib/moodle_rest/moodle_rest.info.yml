@@ -1,0 +1,16 @@
+name: Moodle Integration
+type: module
+description: 'Modules Provides Easy way to integrate with Drupal'
+package: 'Moodle Integration'
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure: moodle_rest.settings
+dependencies:
+  - drupal:menu_link_content
+  - drupal:user
+  - drupal:text
+
+# Information added by Drupal.org packaging script on 2022-01-03
+version: '1.0.2'
+project: 'moodle_rest'
+datestamp: 1641227857

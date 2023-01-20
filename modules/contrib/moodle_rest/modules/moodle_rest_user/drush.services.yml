@@ -1,0 +1,6 @@
+services:
+  moodle_rest_user.commands:
+    class: \Drupal\moodle_rest_user\Commands\MoodleDrushCommands
+    arguments: ['@class_resolver', '@entity_type.manager', '@logger.factory']
+    tags:
+      - { name: drush.command }

@@ -1,0 +1,5 @@
+moodle_rest.settings:
+  title: 'Moodle settings'
+  description: 'Moodle Settings Form'
+  parent: system.admin_config_services
+  route_name: moodle_rest.settings

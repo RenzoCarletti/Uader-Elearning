@@ -1,0 +1,5 @@
+Documentacion para usar composer en parches: https://www.mediacurrent.com/blog/quicker-way-apply-drupal-contrib-patch
+
+Se instalo el parch de la issue https://www.drupal.org/project/quicktabs/issues/2996076
+https://www.drupal.org/files/issues/2022-06-29/quicktabs-direct_link_to_a_quick_tab-2996076-17.patch
+ para la funcionalidad de permalinks, nos da una opcion para autogenerar links de los quicktabs

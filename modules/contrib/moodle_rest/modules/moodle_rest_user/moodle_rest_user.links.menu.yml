@@ -1,0 +1,6 @@
+moodle_rest_user.settings:
+  title: 'User settings'
+  description: 'Moodle user integration settings.'
+  route_name: moodle_rest_user.settings
+  weight: 10
+  parent: moodle_rest.settings

@@ -1,0 +1,21 @@
+moodle_rest_user.course_list:
+  path: '/user/{user}/moodle'
+  defaults:
+    _controller: '\Drupal\moodle_rest_user\Controller\CourseController::userEnrolledCoursesList'
+    _title: 'Course List'
+  requirements:
+    _permission: 'access own moodle_rest_user courses'
+moodle_rest_user.settings:
+  path: '/admin/config/services/moodle/user'
+  defaults:
+    _title: 'User settings'
+    _form: 'Drupal\moodle_rest_user\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
+#moodle_rest_course_unenrol.controller:
+#  path: '/moodle/course/unenrol/{userid}/{courseid}'
+#  defaults:
+#    _controller: '\Drupal\moodle_rest\Controller\CourseController::courseUnenrol'
+#    _title: 'Activities'
+#  requirements:
+#    _permission: 'access content'

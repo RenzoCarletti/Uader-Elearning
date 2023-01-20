@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Drupal Moodle integration.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_requirements().
+ */
+function moodle_rest_requirements($phase) {
+  if ($phase == 'runtime') {
+    $requirements['moodle_rest'] = [
+      'title' => \t('Moodle integration'),
+    ];
+    $config_page = Url::fromRoute('moodle_rest.settings')->toString();
+
+    $url = \Drupal::config('moodle_rest.settings')->get('url');
+    $token = \Drupal::config('moodle_rest.settings')->get('wstoken');
+    if (empty($url) || empty($token)) {
+      $requirements['moodle_rest']['value'] = \t('Not configured');
+      $requirements['moodle_rest']['description'] = t('Moodle URL and webserver token not yet conigured. <a href=":configure">Moodle server configuration page</a>.', [
+        ':configure' => $config_page, 
+      ]);
+      $requirements['moodle_rest']['severity'] = REQUIREMENT_ERROR;
+      return $requirements;
+    }
+
+    $server = \Drupal::service('moodle_rest.rest_functions');
+    $release = $server->getSiteInfoRelease();
+    if ($release == 'error') {
+      $requirements['moodle_rest']['value'] = \t('Error contacting server');
+      $requirements['moodle_rest']['description'] = t('Moodle server is not reachable with configured URL and token. <a href=":configure">Moodle server configuration page</a>.', [
+        ':configure' => $config_page, 
+      ]);
+      $requirements['moodle_rest']['severity'] = REQUIREMENT_ERROR;
+      return $requirements; 
+    }
+    elseif ($release == 'unknown') {
+      $requirements['moodle_rest']['value'] = \t('No information');
+      $requirements['moodle_rest']['description'] = t('The moodle server can be reached, but the user does not have premission to retrieve the server information. This is normal if the configured user do not have access to the <pre>core_webservice_get_site_info</pre> function. <a href=":configure">Moodle server configuration page</a>.', [
+        ':configure' => $config_page, 
+      ]);
+      $requirements['moodle_rest']['severity'] = REQUIREMENT_ERROR; 
+      return $requirements; 
+    }
+    else {
+      $requirements['moodle_rest']['value'] = \t('Server configured');
+      $requirements['moodle_rest']['description'] = t("Server: %sitename<br/>\nVersion: %release<br/>\nUser: %username<br/>\n<a href=\":configure\">Moodle server configuration page</a>.", [
+        '%sitename' => $server->getSiteInfoSitename(),
+        '%release' => $release,
+        '%username' => $server->getSiteInfoUsername(),
+        ':configure' => $config_page, 
+      ]);
+      $requirements['moodle_rest']['severity'] = REQUIREMENT_OK; 
+      return $requirements; 
+    }
+  }
+}

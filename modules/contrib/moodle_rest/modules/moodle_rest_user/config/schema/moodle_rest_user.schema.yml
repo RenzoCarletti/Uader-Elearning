@@ -1,0 +1,62 @@
+moodle_rest_user.settings:
+  type: config_object
+  label: 'Moodle User Settings'
+  mapping:
+    associate:
+      type: boolean
+      label: 'Associate Drupal Users with existing Moodle Accounts'
+    create:
+      type: boolean
+      label: 'Create new Moodle Accounts for Drupal Users'
+    update:
+      type: boolean
+      label: 'Push updates from Drupal Users to Moodle Accounts'
+    delete:
+      type: boolean
+      label: 'Delete Moodle Accounts associated with deleted Drupal Users'
+    pull:
+      type: mapping
+      label: 'When Account information is pulled from Moodle'
+      mapping:
+        login:
+          type: boolean
+          label: 'Pull associated Moodle Account on login'
+        edit:
+          type: boolean
+          label: 'Pull associated Moodle Account before User edit form'
+        view:
+          type: boolean
+          label: 'Pull associated Moodle Account before User view'
+        cron:
+          type: integer
+          label: 'Pull associated Moodle Account on cron frequency'
+    moodle_id_field:
+      type: string
+      label: 'Field machine name to store associated Moodle Account ID'
+    push_password:
+      type: boolean
+      label: 'Push the user password to Moodle account on password reset'
+    push_fields:
+      type: sequence
+      label: 'Drupal User field to Moodle Account push field mapping'
+      sequence:
+        type: mapping
+        mapping:
+          drupal:
+            type: string
+            label: 'Drupal field machine name'
+          moodle:
+            type: string
+            label: 'Moodle field name'
+    pull_fields:
+      type: sequence
+      label: 'Drupal Moodle Account to Drupal User pull field mapping'
+      sequence:
+        type: mapping
+        mapping:
+          drupal:
+            type: string
+            label: 'Drupal field machine name'
+          moodle:
+            type: string
+            label: 'Moodle field name'

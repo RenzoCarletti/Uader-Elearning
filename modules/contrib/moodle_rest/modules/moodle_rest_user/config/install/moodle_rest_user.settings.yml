@@ -1,0 +1,19 @@
+associate: true
+create: false
+update: true
+delete: false
+pull:
+  login: true
+  edit: true
+  view: false
+  cron: 0
+moodle_id_field: moodle_user_id
+push_password: false
+push_fields:
+  -
+    drupal: mail/0/value
+    moodle: email
+pull_fields:
+  -
+    drupal: mail/0/value
+    moodle: email
